@@ -8,7 +8,7 @@ jobs:
   pages:
     runs-on: ubuntu-latest
     env:
-       CNAME: nll.clam.moe
+       CNAME: nlloc.clam.moe
     #  TZ: "Asia/Taipei"
     steps:
       - name: Checkout
