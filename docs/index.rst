@@ -49,9 +49,9 @@ Citation
 
 If you use the NonLinLoc package in your work, please cite the following papers:
 
-* Lomax A., Virieux J., Volant P., Berge-Thierry C. (2000) Probabilistic Earthquake Location in 3D and Layered Models. In: Thurber C.H., Rabinowitz N. (eds) Advances in Seismic Event Location. Modern Approaches in Geophysics, vol 18. Springer, Dordrecht. <a href="https://doi.org/10.1007/978-94-015-9536-0_5" target="_blank">https://doi.org/10.1007/978-94-015-9536-0_5</a>
+* Lomax A., Virieux J., Volant P., Berge-Thierry C. (2000) Probabilistic Earthquake Location in 3D and Layered Models. In: Thurber C.H., Rabinowitz N. (eds) Advances in Seismic Event Location. Modern Approaches in Geophysics, vol 18. Springer, Dordrecht. https://doi.org/10.1007/978-94-015-9536-0_5
 
-* Lomax A., Michelini A., Curtis A. (2014) Earthquake Location, Direct, Global-Search Methods. In: Meyers R. (eds) Encyclopedia of Complexity and Systems Science. Springer, New York, NY. <a href="https://doi.org/10.1007/978-3-642-27737-5_150-2" target="_blank">https://doi.org/10.1007/978-3-642-27737-5_150-2</a>
+* Lomax A., Michelini A., Curtis A. (2014) Earthquake Location, Direct, Global-Search Methods. In: Meyers R. (eds) Encyclopedia of Complexity and Systems Science. Springer, New York, NY. https://doi.org/10.1007/978-3-642-27737-5_150-2
 
 For other A. Lomax NonLinLoc publications, see http://alomax.net/pub_list.html
 

@@ -28,13 +28,12 @@ Synopsis: ``Loc2ssst InputControlFile``
 The Loc2ssst program takes a single argument ``InputControlFile`` which
 specifies the complete path and filename for an `Input Control
 File` with certain required and optional statements specifying program parameters and
-input/output file names and locations. See the `Loc2ssst Statements
-section of the Input Control File for more details. Note that to run Loc2ssst
-the `Generic Statements
-section of the Input Control File must contain the ``CONTROL`` and ``TRANS``
-(Geographic Transformation) statements.
+input/output file names and locations. See the `Loc2ssst Statements section` 
+of the Input Control File for more details. Note that to run Loc2ssst
+the `Generic Statements section` of the Input Control File must contain the 
+``CONTROL`` and ``TRANS`` (Geographic Transformation) statements.
 
-In addition, the Loc2ssst program requires a set of `Loc2ssst
+In addition, the Loc2ssst program requires a set of Loc2ssst
 Statements in the Input Control File
 
 
@@ -46,7 +45,7 @@ written to a new `3D Grid`.
 The updated travel-time values throughout the requested ``LSOUTGRID`` grid are
 written to a new `3D Grid`, these files can be used as travel-time files for subsequent NLLoc location. 
 For a descrition of the naming convention for these grid files, see the
-```LSOUT`` statement in the Loc2ssst Statements section of the Input Control File.
+``LSOUT`` statement in the Loc2ssst Statements section of the Input Control File.
 
 
 Processing and Display of results

@@ -21,7 +21,7 @@ Overview
   conflicts. The basic control file statement syntax consists of a
   control *keyword* followed by one or more *parameters* on a single
   line (except when a newline is explicitely required).
- `KEYWORD parameter1 parameter2 ...`` The keyword must begin in the
+ `KEYWORD parameter1 parameter2 ...` The keyword must begin in the
   first column and is always in upper case. Keywords and parameters must
   be separated by one or more spaces or tabs. A required newline in a
   parameter list is indicated by ``[newline]``. Blank lines and lines
@@ -68,10 +68,12 @@ Generic Control Statements
  `MAPLINE`` and their parameters must be the same for all programs
   runs for a g*n location project.
 
-```INCLUDE`` <#_generic_include_>`__ -
-```CONTROL`` <#_generic_control_>`__ - ```TRANS`` <#_generic_trans_>`__
-- ```MAPLINE`` <#_generic_mapline_>`__ - ``` `` <#_generic_maptrans_>`__
-- ```MAPGRID`` <#_generic_mapgrid_>`__
+- ``INCLUDE``
+- ``CONTROL``
+- ``TRANS``
+- ``MAPLINE``
+- ``MAPTRANS``
+- ``MAPGRID``
 
 | **INCLUDE - Include**
 | *optional*, *repeatable*
@@ -135,9 +137,9 @@ Generic Control Statements
   angle of geographic north in degrees clockwise relative to the
   rectangular coordinates system Y-axis
 | Notes:
-|    1. `` rotAngle                ` = ``0`` gives
+|    1. ``rotAngle`` = ``0`` gives
   North along the positive Y-axis,
- ` rotAngle                ` = ``-30`` gives
+ ``rotAngle`` = ``-30`` gives
   North along the axis 30 deg counterclockwise from the positive Y-axis
   of the rotated, rectangular system.
 |    2. The ``GLOBAL`` mode uses a "spherical earth",
@@ -175,7 +177,7 @@ Generic Control Statements
   style (not implemented)
 | Notes:
 |    1. All formats except ``GMT_GRD`` specify 2D or 3D line files. Use
- `GMT_GRD`` to specify GMT grd files, these will be plotted as a
+ ``GMT_GRD`` to specify GMT grd files, these will be plotted as a
   background image with a green-greyscale by default. If a GMT cpt file
   exists with the same path and name as the GMT grd file, but ending
   with ".cpt", it will be used to determine the color scale.
@@ -184,7 +186,7 @@ Generic Control Statements
 
 | **MAPTRANS - Geographic Transformation for Grid2GMT plot output**
 | *optional*, *non-repeatable*
-| Syntax 1: `` `` `` ``
+| Syntax 1:
 | Sets geographic to working coordinates transformation parameters for
   Grid2GMT plotting output. See ``TRANS`` above for syntax (replacing
  `TRANS`` by ``MAPTRANS``).
@@ -260,9 +262,9 @@ Vel2Grid Program
 |    ``gridType`` (*choice*:
  `VELOCITY VELOCITY_METERS SLOWNESS VEL2 SLOW2 SLOW_2_METERS SLOW_LEN``)
   physical quantity to store on grid ( ``VELOCITY`` = km/s,
- `VELOCITY_METERS`` = m/s, ``SLOWNESS`` = s/km, ``VEL2`` = vel\*\*2,
- `SLOW2`` = (s/km)\*\*2, ``SLOW_2_METERS`` = slow\*\*2 ((s/m)\*\*2),
- `SLOW_LEN`` = slow\*dx (sec)).
+ ``VELOCITY_METERS`` = m/s, ``SLOWNESS`` = s/km, ``VEL2`` = vel\*\*2,
+ ``SLOW2`` = (s/km)\*\*2, ``SLOW_2_METERS`` = slow\*\*2 ((s/m)\*\*2),
+ ``SLOW_LEN`` = slow\*dx (sec)).
 | Notes:
 |    1. The 3D grid dimensions are in kilometers with Z positive down
   (left-handed coordinate system).
