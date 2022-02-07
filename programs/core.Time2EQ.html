@@ -1,67 +1,114 @@
-
 <!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>1.1.4. Time2EQ - travel-time grid to synthetic observations &#8212; NonLinLoc Doc 7.00 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/classic.css" />
-    
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.1.4. Time2EQ - travel-time grid to synthetic observations &mdash; NonLinLoc Doc 7.00 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1.1.5. NLLoc - Non-linear, earthquake location program" href="core.NLLoc.html" />
     <link rel="prev" title="1.1.3. Grid2Time - 3D model grid to travel-time and angles grids" href="core.Grid2Time.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="core.NLLoc.html" title="1.1.5. NLLoc - Non-linear, earthquake location program"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="core.Grid2Time.html" title="1.1.3. Grid2Time - 3D model grid to travel-time and angles grids"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">NonLinLoc Doc 7.00 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../programs.html" accesskey="U"><span class="section-number">1. </span>NonLinLoc Programs</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">1.1.4. </span>Time2EQ - travel-time grid to synthetic observations</a></li> 
-      </ul>
-    </div>  
+</head>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> NonLinLoc Doc
+          </a>
+              <div class="version">
+                7.00
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../programs.html">1. NonLinLoc Programs</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../programs.html#core">1.1. Core</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="core.Vel2Grid.html">1.1.1. Vel2Grid - velocity model description to 3D model grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.Vel2Grid3D.html">1.1.2. Vel2Grid3D - velocity model description to 3D model grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.Grid2Time.html">1.1.3. Grid2Time - 3D model grid to travel-time and angles grids</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.1.4. Time2EQ - travel-time grid to synthetic observations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">1.1.4.1. Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-the-program-input">1.1.4.2. Running the program - Input</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#output">1.1.4.3. Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#processing-and-display-of-results">1.1.4.4. Processing and Display of results</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="core.NLLoc.html">1.1.5. NLLoc - Non-linear, earthquake location program</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.LocSum.html">1.1.6. LocSum - combine location results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.Grid2GMT.html">1.1.7. Grid2GMT - location results or 3D grid data to GMT command script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="core.Loc2ssst.html">1.1.8. Loc2ssst - generate SSST corrections on a  to 3D grid for NLLoc locations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../programs.html#utils">1.2. Utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programs.html#control">1.3. Control</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">NonLinLoc Doc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../programs.html"><span class="section-number">1. </span>NonLinLoc Programs</a> &raquo;</li>
+      <li><span class="section-number">1.1.4. </span>Time2EQ - travel-time grid to synthetic observations</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/programs/core.Time2EQ.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
   <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <section id="time2eq-travel-time-grid-to-synthetic-observations">
-<h1><span class="section-number">1.1.4. </span>Time2EQ - travel-time grid to synthetic observations<a class="headerlink" href="#time2eq-travel-time-grid-to-synthetic-observations" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1.1.4. </span>Time2EQ - travel-time grid to synthetic observations<a class="headerlink" href="#time2eq-travel-time-grid-to-synthetic-observations" title="Permalink to this headline"></a></h1>
 <p>Given a hypocenter location and a set of travel-time grids, Time2EQ
 calculates predicted travel-times.</p>
 <div class="color"></div><p><a href="#id1"><span class="problematic" id="id2">`Overview &lt;#_overview_&gt;`__</span></a> - <a href="#id3"><span class="problematic" id="id4">`Running the program-Input &lt;#_running_&gt;`__</span></a>
 - <a href="#id5"><span class="problematic" id="id6">`Output &lt;#_output_&gt;`__</span></a> - <a href="#id7"><span class="problematic" id="id8">`Processing and Display of
 results &lt;#_processing_&gt;`__</span></a> - <a class="reference external" href="./index.html">[NonLinLoc Home]</a></p>
 <div class="color"></div><section id="overview">
-<h2><span class="section-number">1.1.4.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1.4.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
 <p>The Time2EQ program calculates predicted travel-times between one or
 more synthetic events and one or more stations. Predicted take-off
 angles at the source are also calculated if an event mechanism is given
 and the corresponidng take-off angles grids are available.</p>
 <div class="color"></div></section>
 <section id="running-the-program-input">
-<h2><span class="section-number">1.1.4.2. </span>Running the program - Input<a class="headerlink" href="#running-the-program-input" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1.4.2. </span>Running the program - Input<a class="headerlink" href="#running-the-program-input" title="Permalink to this headline"></a></h2>
 <p>Synopsis: <code class="docutils literal notranslate"><span class="pre">Time2EQ</span> <span class="pre">InputControlFile</span></code></p>
 <p>The Time2EQ program takes a single argument <code class="docutils literal notranslate"><span class="pre">InputControlFile</span></code> which
 specifies the complete path and filename for an <a class="reference external" href="./control.html">Input Control
@@ -83,12 +130,12 @@ in the <a href="#id13"><span class="problematic" id="id14">`Time2EQ Statements s
 Input Control File.</p>
 <div class="color"></div></section>
 <section id="output">
-<h2><span class="section-number">1.1.4.3. </span>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1.4.3. </span>Output<a class="headerlink" href="#output" title="Permalink to this headline"></a></h2>
 <p>The predicted travel-times are written to an observation file in
 <a href="#id15"><span class="problematic" id="id16">`NonLinLoc phase file format &lt;formats.html#_phase_nlloc_&gt;`__</span></a>.</p>
 <div class="color"></div></section>
 <section id="processing-and-display-of-results">
-<h2><span class="section-number">1.1.4.4. </span>Processing and Display of results<a class="headerlink" href="#processing-and-display-of-results" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1.4.4. </span>Processing and Display of results<a class="headerlink" href="#processing-and-display-of-results" title="Permalink to this headline"></a></h2>
 <p>The predicted travel-time files can be used as input phase/observation
 files for location with the program <a class="reference external" href="./NLLoc.html">NLLoc</a>.</p>
 <div class="color"></div><p>Back to <a class="reference external" href="./index.html">the NonLinLoc site Home page</a>.</p>
@@ -97,76 +144,34 @@ files for location with the program <a class="reference external" href="./NLLoc.
 </section>
 
 
-            <div class="clearer"></div>
+           </div>
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="../index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">1.1.4. Time2EQ - travel-time grid to synthetic observations</a><ul>
-<li><a class="reference internal" href="#overview">1.1.4.1. Overview</a></li>
-<li><a class="reference internal" href="#running-the-program-input">1.1.4.2. Running the program - Input</a></li>
-<li><a class="reference internal" href="#output">1.1.4.3. Output</a></li>
-<li><a class="reference internal" href="#processing-and-display-of-results">1.1.4.4. Processing and Display of results</a></li>
-</ul>
-</li>
-</ul>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="core.Grid2Time.html" class="btn btn-neutral float-left" title="1.1.3. Grid2Time - 3D model grid to travel-time and angles grids" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="core.NLLoc.html" class="btn btn-neutral float-right" title="1.1.5. NLLoc - Non-linear, earthquake location program" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Anthony Lomax.</p>
   </div>
-  <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="core.Grid2Time.html"
-                          title="previous chapter"><span class="section-number">1.1.3. </span>Grid2Time - 3D model grid to travel-time and angles grids</a></p>
-  </div>
-  <div>
-    <h4>Next topic</h4>
-    <p class="topless"><a href="core.NLLoc.html"
-                          title="next chapter"><span class="section-number">1.1.5. </span>NLLoc - Non-linear, earthquake location program</a></p>
-  </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/programs/core.Time2EQ.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="core.NLLoc.html" title="1.1.5. NLLoc - Non-linear, earthquake location program"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="core.Grid2Time.html" title="1.1.3. Grid2Time - 3D model grid to travel-time and angles grids"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">NonLinLoc Doc 7.00 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../programs.html" ><span class="section-number">1. </span>NonLinLoc Programs</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">1.1.4. </span>Time2EQ - travel-time grid to synthetic observations</a></li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, Anthony Lomax.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
-    </div>
-  </body>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

@@ -1,46 +1,94 @@
-
 <!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>1.3.1. NonLinLoc Software Package Control File &#8212; NonLinLoc Doc 7.00 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/classic.css" />
-    
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.3.1. NonLinLoc Software Package Control File &mdash; NonLinLoc Doc 7.00 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="1.1.8. Loc2ssst - generate SSST corrections on a to 3D grid for NLLoc locations" href="core.Loc2ssst.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="core.Loc2ssst.html" title="1.1.8. Loc2ssst - generate SSST corrections on a to 3D grid for NLLoc locations"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">NonLinLoc Doc 7.00 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../programs.html" accesskey="U"><span class="section-number">1. </span>NonLinLoc Programs</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">1.3.1. </span>NonLinLoc Software Package Control File</a></li> 
-      </ul>
-    </div>  
+</head>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> NonLinLoc Doc
+          </a>
+              <div class="version">
+                7.00
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../programs.html">1. NonLinLoc Programs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../programs.html#core">1.1. Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programs.html#utils">1.2. Utils</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../programs.html#control">1.3. Control</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.3.1. NonLinLoc Software Package Control File</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">1.3.1.1. Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#definitions">1.3.1.2. Definitions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generic-control-statements">1.3.1.3. Generic Control Statements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vel2grid-program">1.3.1.4. Vel2Grid Program</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vel2grid3d-program">1.3.1.5. Vel2Grid3D Program</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#grid2time-program">1.3.1.6. Grid2Time Program</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#time2eq-program">1.3.1.7. Time2EQ Program</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nlloc-program">1.3.1.8. NLLoc Program</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loc2ssst-program">1.3.1.9. Loc2ssst Program</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">NonLinLoc Doc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../programs.html"><span class="section-number">1. </span>NonLinLoc Programs</a> &raquo;</li>
+      <li><span class="section-number">1.3.1. </span>NonLinLoc Software Package Control File</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/programs/control.ControlFile.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
   <section id="nonlinloc-software-package-control-file">
-<h1><span class="section-number">1.3.1. </span>NonLinLoc Software Package Control File<a class="headerlink" href="#nonlinloc-software-package-control-file" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1.3.1. </span>NonLinLoc Software Package Control File<a class="headerlink" href="#nonlinloc-software-package-control-file" title="Permalink to this headline"></a></h1>
 <p><a class="reference internal" href="core.Vel2Grid3D.html#overview"><span class="std std-ref">Overview</span></a> -
 <a class="reference internal" href="#definitions"><span class="std std-ref">Definitions</span></a> -
 <a class="reference internal" href="#generic-control-statements"><span class="std std-ref">Generic Control Statements</span></a> -
@@ -51,7 +99,7 @@
 <a class="reference internal" href="#nlloc-program"><span class="std std-ref">NLLoc Program</span></a> -
 <a class="reference internal" href="#loc2ssst-program"><span class="std std-ref">Loc2ssst Program</span></a></p>
 <section id="overview">
-<h2><span class="section-number">1.3.1.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3.1.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
 <div class="line-block">
 <div class="line">The various NonLinLoc programs all use the same control file syntax
  and share some “generic” control statements. The control statements
@@ -69,7 +117,7 @@
 </div>
 </section>
 <section id="definitions">
-<h2><span class="section-number">1.3.1.2. </span>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3.1.2. </span>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline"></a></h2>
 <div class="line-block">
 <div class="line"><strong>Statement Priority</strong></div>
 <div class="line"><em>required</em> - must be present in control file to run the coressponding
@@ -102,7 +150,7 @@ parameters</div>
 </div>
 </section>
 <section id="generic-control-statements">
-<h2><span class="section-number">1.3.1.3. </span>Generic Control Statements<a class="headerlink" href="#generic-control-statements" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3.1.3. </span>Generic Control Statements<a class="headerlink" href="#generic-control-statements" title="Permalink to this headline"></a></h2>
 <div class="line-block">
 <div class="line">The generic control file statements may be used by one or more of the
  programs in the NonLinLoc package. The statements <code class="docutils literal notranslate"><span class="pre">TRANS</span></code> and
@@ -268,7 +316,7 @@ the control file.</div>
 </div>
 </section>
 <section id="vel2grid-program">
-<h2><span class="section-number">1.3.1.4. </span>Vel2Grid Program<a class="headerlink" href="#vel2grid-program" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3.1.4. </span>Vel2Grid Program<a class="headerlink" href="#vel2grid-program" title="Permalink to this headline"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">`VGOUT</span></code> &lt;#_Vel2Grid_vgout_&gt;`__ - <code class="docutils literal notranslate"><span class="pre">`VGTYPE</span></code> &lt;#_Vel2Grid_vgtype_&gt;`__
 - <code class="docutils literal notranslate"><span class="pre">`VGGRID</span></code> &lt;#_Vel2Grid_vgrid_&gt;`__ - <code class="docutils literal notranslate"><span class="pre">`LAYER</span></code> &lt;#_Vel2Grid_layer_&gt;`__
 - <code class="docutils literal notranslate"><span class="pre">`2DTO3DTRANS</span></code> &lt;#_Vel2Grid_2d3dtrans_&gt;`__ -
@@ -405,7 +453,7 @@ indexes defining this polygon</div>
 </div>
 </section>
 <section id="vel2grid3d-program">
-<h2><span class="section-number">1.3.1.5. </span>Vel2Grid3D Program<a class="headerlink" href="#vel2grid3d-program" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3.1.5. </span>Vel2Grid3D Program<a class="headerlink" href="#vel2grid3d-program" title="Permalink to this headline"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">`VGINP</span></code> &lt;#_Vel2Grid3D_vginp_&gt;`__ -
 <code class="docutils literal notranslate"><span class="pre">`VGCLIP</span></code> &lt;#_Vel2Grid3D_vgclip_&gt;`</p>
 <div class="line-block">
@@ -438,7 +486,7 @@ deepest overlying input node with velocity &lt; Vmax.</div>
 </div>
 </section>
 <section id="grid2time-program">
-<h2><span class="section-number">1.3.1.6. </span>Grid2Time Program<a class="headerlink" href="#grid2time-program" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3.1.6. </span>Grid2Time Program<a class="headerlink" href="#grid2time-program" title="Permalink to this headline"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">`GTFILES</span></code> &lt;#_Grid2Time_gtfiles_&gt;`__ -
 <code class="docutils literal notranslate"><span class="pre">`GTMODE</span></code> &lt;#_Grid2Time_gtmode_&gt;`__ -
 <code class="docutils literal notranslate"><span class="pre">`GTSRCE</span></code> &lt;#_Grid2Time_gtsrce_&gt;`__ -
@@ -546,7 +594,7 @@ and Lecomte, 1991 for more information.</div>
 </div>
 </section>
 <section id="time2eq-program">
-<h2><span class="section-number">1.3.1.7. </span>Time2EQ Program<a class="headerlink" href="#time2eq-program" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3.1.7. </span>Time2EQ Program<a class="headerlink" href="#time2eq-program" title="Permalink to this headline"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">`EQFILES</span></code> &lt;#_Time2EQ_eqfiles_&gt;`__ -
 <code class="docutils literal notranslate"><span class="pre">`EQEVENT</span></code> &lt;#_Time2EQ_eqevent_&gt;`__ - <code class="docutils literal notranslate"><span class="pre">`EQSTA</span></code> &lt;#_Time2EQ_eqsta_&gt;`__
 - <code class="docutils literal notranslate"><span class="pre">`EQSRCE</span></code> &lt;#_Time2EQ_eqsrce_&gt;`__ -
@@ -725,7 +773,7 @@ travel-times.</div>
 </div>
 </section>
 <section id="nlloc-program">
-<h2><span class="section-number">1.3.1.8. </span>NLLoc Program<a class="headerlink" href="#nlloc-program" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3.1.8. </span>NLLoc Program<a class="headerlink" href="#nlloc-program" title="Permalink to this headline"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">`LOCSIG</span></code> &lt;#_NLLoc_locsig_&gt;`__ - <code class="docutils literal notranslate"><span class="pre">`LOCCOM</span></code> &lt;#_NLLoc_loccom_&gt;`__ -
 <code class="docutils literal notranslate"><span class="pre">`LOCSRCE</span></code> &lt;#_NLLoc_gtsrce_&gt;`__ - <code class="docutils literal notranslate"><span class="pre">`LOCFILES</span></code> &lt;#_NLLoc_locfiles_&gt;`__
 - <code class="docutils literal notranslate"><span class="pre">`LOCHYPOUT</span></code> &lt;#_NLLoc_lochypout_&gt;`__ -
@@ -1358,7 +1406,7 @@ flag to set activation of station distribution weighting (0=NO, 1=Yes)</div>
 </div>
 </section>
 <section id="loc2ssst-program">
-<h2><span class="section-number">1.3.1.9. </span>Loc2ssst Program<a class="headerlink" href="#loc2ssst-program" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3.1.9. </span>Loc2ssst Program<a class="headerlink" href="#loc2ssst-program" title="Permalink to this headline"></a></h2>
 <div class="line-block">
 <div class="line"><strong>LSOUT - Output File Root Name</strong></div>
 <div class="line"><em>required</em>, <em>non-repeatable</em></div>
@@ -1516,73 +1564,33 @@ codes, if possible.</div>
 </section>
 
 
-            <div class="clearer"></div>
+           </div>
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="../index.html">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">1.3.1. NonLinLoc Software Package Control File</a><ul>
-<li><a class="reference internal" href="#overview">1.3.1.1. Overview</a></li>
-<li><a class="reference internal" href="#definitions">1.3.1.2. Definitions</a></li>
-<li><a class="reference internal" href="#generic-control-statements">1.3.1.3. Generic Control Statements</a></li>
-<li><a class="reference internal" href="#vel2grid-program">1.3.1.4. Vel2Grid Program</a></li>
-<li><a class="reference internal" href="#vel2grid3d-program">1.3.1.5. Vel2Grid3D Program</a></li>
-<li><a class="reference internal" href="#grid2time-program">1.3.1.6. Grid2Time Program</a></li>
-<li><a class="reference internal" href="#time2eq-program">1.3.1.7. Time2EQ Program</a></li>
-<li><a class="reference internal" href="#nlloc-program">1.3.1.8. NLLoc Program</a></li>
-<li><a class="reference internal" href="#loc2ssst-program">1.3.1.9. Loc2ssst Program</a></li>
-</ul>
-</li>
-</ul>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="core.Loc2ssst.html" class="btn btn-neutral float-left" title="1.1.8. Loc2ssst - generate SSST corrections on a to 3D grid for NLLoc locations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Anthony Lomax.</p>
   </div>
-  <div>
-    <h4>Previous topic</h4>
-    <p class="topless"><a href="core.Loc2ssst.html"
-                          title="previous chapter"><span class="section-number">1.1.8. </span>Loc2ssst - generate SSST corrections on a  to 3D grid for NLLoc locations</a></p>
-  </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/programs/control.ControlFile.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>$('#searchbox').show(0);</script>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="core.Loc2ssst.html" title="1.1.8. Loc2ssst - generate SSST corrections on a to 3D grid for NLLoc locations"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">NonLinLoc Doc 7.00 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../programs.html" ><span class="section-number">1. </span>NonLinLoc Programs</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><span class="section-number">1.3.1. </span>NonLinLoc Software Package Control File</a></li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, Anthony Lomax.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
-    </div>
-  </body>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>
