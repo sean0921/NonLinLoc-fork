@@ -60,7 +60,7 @@
  conflicts. The basic control file statement syntax consists of a
  control <em>keyword</em> followed by one or more <em>parameters</em> on a single
  line (except when a newline is explicitely required).
-<cite>KEYWORD parameter1 parameter2 …`</cite> The keyword must begin in the
+<cite>KEYWORD parameter1 parameter2 …</cite> The keyword must begin in the
  first column and is always in upper case. Keywords and parameters must
  be separated by one or more spaces or tabs. A required newline in a
  parameter list is indicated by <code class="docutils literal notranslate"><span class="pre">[newline]</span></code>. Blank lines and lines
@@ -109,10 +109,14 @@ parameters</div>
 <cite>MAPLINE`</cite> and their parameters must be the same for all programs
  runs for a g*n location project.</div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">`INCLUDE</span></code> &lt;#_generic_include_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`CONTROL</span></code> &lt;#_generic_control_&gt;`__ - <code class="docutils literal notranslate"><span class="pre">`TRANS</span></code> &lt;#_generic_trans_&gt;`__
-- <code class="docutils literal notranslate"><span class="pre">`MAPLINE</span></code> &lt;#_generic_mapline_&gt;`__ - <code class="docutils literal notranslate"><span class="pre">`</span> <span class="pre">``</span> <span class="pre">&lt;#_generic_maptrans_&gt;`__</span>
-<span class="pre">-</span> <span class="pre">```MAPGRID</span></code> &lt;#_generic_mapgrid_&gt;`__</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CONTROL</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TRANS</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MAPLINE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MAPTRANS</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MAPGRID</span></code></p></li>
+</ul>
 <div class="line-block">
 <div class="line"><strong>INCLUDE - Include</strong></div>
 <div class="line"><em>optional</em>, <em>repeatable</em></div>
@@ -178,9 +182,9 @@ decimal degrees</div>
 angle of geographic north in degrees clockwise relative to the
 rectangular coordinates system Y-axis</div>
 <div class="line">Notes:</div>
-<div class="line">   1. `` rotAngle                ` = <code class="docutils literal notranslate"><span class="pre">0</span></code> gives
+<div class="line">   1. <code class="docutils literal notranslate"><span class="pre">rotAngle</span></code> = <code class="docutils literal notranslate"><span class="pre">0</span></code> gives
  North along the positive Y-axis,
-` rotAngle                ` = <code class="docutils literal notranslate"><span class="pre">-30</span></code> gives
+<code class="docutils literal notranslate"><span class="pre">rotAngle</span></code> = <code class="docutils literal notranslate"><span class="pre">-30</span></code> gives
  North along the axis 30 deg counterclockwise from the positive Y-axis
  of the rotated, rectangular system.</div>
 <div class="line">   2. The <code class="docutils literal notranslate"><span class="pre">GLOBAL</span></code> mode uses a “spherical earth”,
@@ -219,7 +223,7 @@ green and blue intensities (0.0-1.0) (not implemented)</div>
 style (not implemented)</div>
 <div class="line">Notes:</div>
 <div class="line">   1. All formats except <code class="docutils literal notranslate"><span class="pre">GMT_GRD</span></code> specify 2D or 3D line files. Use
-<cite>GMT_GRD`</cite> to specify GMT grd files, these will be plotted as a
+<code class="docutils literal notranslate"><span class="pre">GMT_GRD</span></code> to specify GMT grd files, these will be plotted as a
  background image with a green-greyscale by default. If a GMT cpt file
  exists with the same path and name as the GMT grd file, but ending
  with “.cpt”, it will be used to determine the color scale.</div>
@@ -229,7 +233,7 @@ coordinate system.</div>
 <div class="line-block">
 <div class="line"><strong>MAPTRANS - Geographic Transformation for Grid2GMT plot output</strong></div>
 <div class="line"><em>optional</em>, <em>non-repeatable</em></div>
-<div class="line">Syntax 1: `` `` `` ``</div>
+<div class="line">Syntax 1:</div>
 <div class="line">Sets geographic to working coordinates transformation parameters for
  Grid2GMT plotting output. See <code class="docutils literal notranslate"><span class="pre">TRANS</span></code> above for syntax (replacing
 <cite>TRANS`</cite> by <code class="docutils literal notranslate"><span class="pre">MAPTRANS</span></code>).</div>
@@ -305,9 +309,9 @@ y and z axes</div>
 <div class="line">   <code class="docutils literal notranslate"><span class="pre">gridType</span></code> (<em>choice</em>:
 <cite>VELOCITY VELOCITY_METERS SLOWNESS VEL2 SLOW2 SLOW_2_METERS SLOW_LEN`</cite>)
  physical quantity to store on grid ( <code class="docutils literal notranslate"><span class="pre">VELOCITY</span></code> = km/s,
-<cite>VELOCITY_METERS`</cite> = m/s, <code class="docutils literal notranslate"><span class="pre">SLOWNESS</span></code> = s/km, <code class="docutils literal notranslate"><span class="pre">VEL2</span></code> = vel**2,
-<cite>SLOW2`</cite> = (s/km)**2, <code class="docutils literal notranslate"><span class="pre">SLOW_2_METERS</span></code> = slow**2 ((s/m)**2),
-<cite>SLOW_LEN`</cite> = slow*dx (sec)).</div>
+<code class="docutils literal notranslate"><span class="pre">VELOCITY_METERS</span></code> = m/s, <code class="docutils literal notranslate"><span class="pre">SLOWNESS</span></code> = s/km, <code class="docutils literal notranslate"><span class="pre">VEL2</span></code> = vel**2,
+<code class="docutils literal notranslate"><span class="pre">SLOW2</span></code> = (s/km)**2, <code class="docutils literal notranslate"><span class="pre">SLOW_2_METERS</span></code> = slow**2 ((s/m)**2),
+<code class="docutils literal notranslate"><span class="pre">SLOW_LEN</span></code> = slow*dx (sec)).</div>
 <div class="line">Notes:</div>
 <div class="line">   1. The 3D grid dimensions are in kilometers with Z positive down
 (left-handed coordinate system).</div>
