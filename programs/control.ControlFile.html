@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -88,7 +89,7 @@
            <div itemprop="articleBody">
              
   <section id="nonlinloc-software-package-control-file">
-<h1><span class="section-number">1.3.1. </span>NonLinLoc Software Package Control File<a class="headerlink" href="#nonlinloc-software-package-control-file" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">1.3.1. </span>NonLinLoc Software Package Control File<a class="headerlink" href="#nonlinloc-software-package-control-file" title="Permalink to this heading"></a></h1>
 <p><a class="reference internal" href="core.Vel2Grid3D.html#overview"><span class="std std-ref">Overview</span></a> -
 <a class="reference internal" href="#definitions"><span class="std std-ref">Definitions</span></a> -
 <a class="reference internal" href="#generic-control-statements"><span class="std std-ref">Generic Control Statements</span></a> -
@@ -99,7 +100,7 @@
 <a class="reference internal" href="#nlloc-program"><span class="std std-ref">NLLoc Program</span></a> -
 <a class="reference internal" href="#loc2ssst-program"><span class="std std-ref">Loc2ssst Program</span></a></p>
 <section id="overview">
-<h2><span class="section-number">1.3.1.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">1.3.1.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <div class="line-block">
 <div class="line">The various NonLinLoc programs all use the same control file syntax
  and share some “generic” control statements. The control statements
@@ -117,7 +118,7 @@
 </div>
 </section>
 <section id="definitions">
-<h2><span class="section-number">1.3.1.2. </span>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">1.3.1.2. </span>Definitions<a class="headerlink" href="#definitions" title="Permalink to this heading"></a></h2>
 <div class="line-block">
 <div class="line"><strong>Statement Priority</strong></div>
 <div class="line"><em>required</em> - must be present in control file to run the coressponding
@@ -150,21 +151,13 @@ parameters</div>
 </div>
 </section>
 <section id="generic-control-statements">
-<h2><span class="section-number">1.3.1.3. </span>Generic Control Statements<a class="headerlink" href="#generic-control-statements" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">1.3.1.3. </span>Generic Control Statements<a class="headerlink" href="#generic-control-statements" title="Permalink to this heading"></a></h2>
 <div class="line-block">
 <div class="line">The generic control file statements may be used by one or more of the
  programs in the NonLinLoc package. The statements <code class="docutils literal notranslate"><span class="pre">TRANS</span></code> and
 <cite>MAPLINE`</cite> and their parameters must be the same for all programs
  runs for a g*n location project.</div>
 </div>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">INCLUDE</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CONTROL</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">TRANS</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MAPLINE</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MAPTRANS</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">MAPGRID</span></code></p></li>
-</ul>
 <div class="line-block">
 <div class="line"><strong>INCLUDE - Include</strong></div>
 <div class="line"><em>optional</em>, <em>repeatable</em></div>
@@ -253,7 +246,7 @@ algorithm details see <code class="docutils literal notranslate"><span class="pr
 the source code of the GMT plotting package</div>
 <div class="line">   7. The <code class="docutils literal notranslate"><span class="pre">TRANS_MERC</span></code> Transverse Mercator projection is adapted from
 the source code of the GMT plotting package</div>
-<div class="line">   8. The <code class="docutils literal notranslate"><span class="pre">AZIMUTHAL_EQUIDIST</span></code> Transverse Mercator projection is adapted from
+<div class="line">   8. The <code class="docutils literal notranslate"><span class="pre">AZIMUTHAL_EQUIDIST</span></code> Projection is adapted from
 the source code of the GMT plotting package</div>
 </div>
 <div class="line-block">
@@ -316,12 +309,7 @@ the control file.</div>
 </div>
 </section>
 <section id="vel2grid-program">
-<h2><span class="section-number">1.3.1.4. </span>Vel2Grid Program<a class="headerlink" href="#vel2grid-program" title="Permalink to this headline"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">`VGOUT</span></code> &lt;#_Vel2Grid_vgout_&gt;`__ - <code class="docutils literal notranslate"><span class="pre">`VGTYPE</span></code> &lt;#_Vel2Grid_vgtype_&gt;`__
-- <code class="docutils literal notranslate"><span class="pre">`VGGRID</span></code> &lt;#_Vel2Grid_vgrid_&gt;`__ - <code class="docutils literal notranslate"><span class="pre">`LAYER</span></code> &lt;#_Vel2Grid_layer_&gt;`__
-- <code class="docutils literal notranslate"><span class="pre">`2DTO3DTRANS</span></code> &lt;#_Vel2Grid_2d3dtrans_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`VERTEX</span></code> &lt;#_Vel2Grid_vertex_&gt;`__ - <code class="docutils literal notranslate"><span class="pre">`EDGE</span></code> &lt;#_Vel2Grid_edge_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`POLYGON2</span></code> &lt;#_Vel2Grid_polygon2_&gt;`</p>
+<h2><span class="section-number">1.3.1.4. </span>Vel2Grid Program<a class="headerlink" href="#vel2grid-program" title="Permalink to this heading"></a></h2>
 <div class="line-block">
 <div class="line"><strong>VGOUT - Output File Root Name</strong></div>
 <div class="line"><em>required</em>, <em>non-repeatable</em></div>
@@ -453,9 +441,7 @@ indexes defining this polygon</div>
 </div>
 </section>
 <section id="vel2grid3d-program">
-<h2><span class="section-number">1.3.1.5. </span>Vel2Grid3D Program<a class="headerlink" href="#vel2grid3d-program" title="Permalink to this headline"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">`VGINP</span></code> &lt;#_Vel2Grid3D_vginp_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`VGCLIP</span></code> &lt;#_Vel2Grid3D_vgclip_&gt;`</p>
+<h2><span class="section-number">1.3.1.5. </span>Vel2Grid3D Program<a class="headerlink" href="#vel2grid3d-program" title="Permalink to this heading"></a></h2>
 <div class="line-block">
 <div class="line"><strong>VGINP - Input Velocity Model File</strong></div>
 <div class="line"><em>required</em>, <em>non-repeatable</em></div>
@@ -486,11 +472,7 @@ deepest overlying input node with velocity &lt; Vmax.</div>
 </div>
 </section>
 <section id="grid2time-program">
-<h2><span class="section-number">1.3.1.6. </span>Grid2Time Program<a class="headerlink" href="#grid2time-program" title="Permalink to this headline"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">`GTFILES</span></code> &lt;#_Grid2Time_gtfiles_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`GTMODE</span></code> &lt;#_Grid2Time_gtmode_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`GTSRCE</span></code> &lt;#_Grid2Time_gtsrce_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`GT_PLFD</span></code> &lt;#_Grid2Time_gt_plfd_&gt;`</p>
+<h2><span class="section-number">1.3.1.6. </span>Grid2Time Program<a class="headerlink" href="#grid2time-program" title="Permalink to this heading"></a></h2>
 <div class="line-block">
 <div class="line"><strong>GTFILES - Input and Output File Root Name</strong></div>
 <div class="line"><em>required</em>, <em>non-repeatable</em></div>
@@ -594,13 +576,7 @@ and Lecomte, 1991 for more information.</div>
 </div>
 </section>
 <section id="time2eq-program">
-<h2><span class="section-number">1.3.1.7. </span>Time2EQ Program<a class="headerlink" href="#time2eq-program" title="Permalink to this headline"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">`EQFILES</span></code> &lt;#_Time2EQ_eqfiles_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`EQEVENT</span></code> &lt;#_Time2EQ_eqevent_&gt;`__ - <code class="docutils literal notranslate"><span class="pre">`EQSTA</span></code> &lt;#_Time2EQ_eqsta_&gt;`__
-- <code class="docutils literal notranslate"><span class="pre">`EQSRCE</span></code> &lt;#_Time2EQ_eqsrce_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`EQMECH</span></code> &lt;#_Time2EQ_eqmech_&gt;`__ - <code class="docutils literal notranslate"><span class="pre">`EQMODE</span></code> &lt;#_Time2EQ_eqmode_&gt;`__
-- <code class="docutils literal notranslate"><span class="pre">`EQQUAL2ERR</span></code> &lt;#_Time2EQ_eqqual2err_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`EQVPVS</span></code> &lt;#_Time2EQ_eqvpvs_&gt;`</p>
+<h2><span class="section-number">1.3.1.7. </span>Time2EQ Program<a class="headerlink" href="#time2eq-program" title="Permalink to this heading"></a></h2>
 <div class="line-block">
 <div class="line"><strong>EQFILES - Input and Output File Root Name</strong></div>
 <div class="line"><em>required</em>, <em>non-repeatable</em></div>
@@ -773,25 +749,7 @@ travel-times.</div>
 </div>
 </section>
 <section id="nlloc-program">
-<h2><span class="section-number">1.3.1.8. </span>NLLoc Program<a class="headerlink" href="#nlloc-program" title="Permalink to this headline"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">`LOCSIG</span></code> &lt;#_NLLoc_locsig_&gt;`__ - <code class="docutils literal notranslate"><span class="pre">`LOCCOM</span></code> &lt;#_NLLoc_loccom_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`LOCSRCE</span></code> &lt;#_NLLoc_gtsrce_&gt;`__ - <code class="docutils literal notranslate"><span class="pre">`LOCFILES</span></code> &lt;#_NLLoc_locfiles_&gt;`__
-- <code class="docutils literal notranslate"><span class="pre">`LOCHYPOUT</span></code> &lt;#_NLLoc_lochypout_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`LOCSEARCH</span></code> &lt;#_NLLoc_locsearch_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`LOCMETH</span></code> &lt;#_NLLoc_locmeth_&gt;`__ - <code class="docutils literal notranslate"><span class="pre">`LOCGAU</span></code> &lt;#_NLLoc_locgau_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`LOCGAU2</span></code> &lt;#_NLLoc_locgau2_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`LOCPHASEID</span></code> &lt;#_NLLoc_locphaseid_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`LOCQUAL2ERR</span></code> &lt;#_NLLoc_locqual2err_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`LOCGRID</span></code> &lt;#_NLLoc_locgrid_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`LOCPHSTAT</span></code> &lt;#_NLLoc_locphstat_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`LOCANGLES</span></code> &lt;#_NLLoc_locangles_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`LOCMAG</span></code> &lt;#_NLLoc_locmag_&gt;`__ - <code class="docutils literal notranslate"><span class="pre">`LOCCMP</span></code> &lt;#_NLLoc_loccmp_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`LOCALIAS</span></code> &lt;#_NLLoc_localias_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`LOCEXCLUDE</span></code> &lt;#_NLLoc_locexclude_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`LOCDELAY</span></code> &lt;#_NLLoc_locdelay_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`LOCELEVCORR</span></code> &lt;#_NLLoc_elevcorr_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`LOCTOPO_SURFACE</span></code> &lt;#_NLLoc_topo_surface_&gt;`__ -
-<code class="docutils literal notranslate"><span class="pre">`LOCSTAWT</span></code> &lt;#_NLLoc_stawt_&gt;`</p>
+<h2><span class="section-number">1.3.1.8. </span>NLLoc Program<a class="headerlink" href="#nlloc-program" title="Permalink to this heading"></a></h2>
 <div class="line-block">
 <div class="line"><strong>LOCSIG - Signature text</strong></div>
 <div class="line"><em>optional</em>, <em>non-repeatable</em></div>
@@ -1404,9 +1362,36 @@ flag to set activation of station distribution weighting (0=NO, 1=Yes)</div>
  sets automatic cutoff distance: equal to the mean distance between all
  pairs of stations used for location.</div>
 </div>
+<div class="line-block">
+<div class="line"><strong>LOCPOSTERIOR - Posterior pdf grids to use to drive location search instead of LOCMETH algorithm</strong></div>
+<div class="line"><em>optional</em>, <em>non-repeatable</em></div>
+<div class="line">Syntax 1: <code class="docutils literal notranslate"><span class="pre">LOCPOSTERIOR</span></code> <code class="docutils literal notranslate"><span class="pre">Type</span> <span class="pre">GridFile</span> <span class="pre">DefaultValue</span> <span class="pre">CoherenceMin</span> <span class="pre">MaxOtherWeight</span> <span class="pre">MaxSE3</span> <span class="pre">MaxNother</span> <span class="pre">MaxMagDiff</span> <span class="pre">MinMag</span></code></div>
+<div class="line">The location search will use pdf values from the specified grid(s) to drive the location search.</div>
+<div class="line">   <code class="docutils literal notranslate"><span class="pre">Type</span></code> (<em>choice</em>: <code class="docutils literal notranslate"><span class="pre">OCT_TREE</span> <span class="pre">GRID</span></code>) type of grid file(s)</div>
+<div class="line">   <code class="docutils literal notranslate"><span class="pre">GridFile</span></code> (<em>string</em>) grid file path to use with weight 1.0, or <a href="#id51"><span class="problematic" id="id52">*</span></a>.stream_coherences files specifying one or more grid file paths and corresponding coherence values to map to stacking weights.</div>
+<div class="line">   <code class="docutils literal notranslate"><span class="pre">DefaultValue</span></code> (<em>float</em>) default pdf value to use if no value available in grid file (e.g. 1e-30)</div>
+<div class="line">   <code class="docutils literal notranslate"><span class="pre">CoherenceMin</span></code> (<em>float</em>) minimum coherence to use for mapping coherence to NLL-cohernce pdf stack weight</div>
+<div class="line">   <code class="docutils literal notranslate"><span class="pre">MaxOtherWeight</span></code> (<em>float</em>) maximum total of coherence weight for other events; if exceeded, other event coherences normalized to sum to this value; recommended value is -1.0, disabled.</div>
+<div class="line">   <code class="docutils literal notranslate"><span class="pre">MaxSE3</span></code> (<em>float</em>) maximum event se3 (ellipsoid.len3) to include event in pdf stack. Use negative value to disable this check.
+Excludes events with poor location constraint and large pdf extent. Such event pdf’s would only contribute noise to stack,
+but due to potentially high complexity of stack pdf, including such pdf’s may cause oct-tree search to get trapped
+in a local minimum within this event pdf (especially if LOC_SEARCH init_num_cells_x/y/z are too few). When this trapping occurs, some
+NLL-coherence events may cluster far from any events in SSST reference events (LOC_PATH), with unusual epicenter or depth.
+May typically have same or similar value as maximum distance in km between epicenters used to obtain cross-correlation coherences.</div>
+<div class="line">   <code class="docutils literal notranslate"><span class="pre">MaxNother</span></code> (<em>float</em>) maximum number of other events to include in pdf stack, Use negative value for no limit.
+limit processing time and number of files open when a large number of events have high coherency.
+Recommended value is -1.0, no limit.</div>
+<div class="line">   <code class="docutils literal notranslate"><span class="pre">MaxMagDiff</span></code> (<em>float</em>) maximum magnitude difference to include other event in pdf stack (-1.0 to disable).
+Excludes events that are not likely to have waveform similarity with target due to differences in spectral peak.
+May help avoid false high correlation due to filtering or clipping.
+Recommended value is -1.0, disabled.</div>
+<div class="line">   <code class="docutils literal notranslate"><span class="pre">MinMag</span></code> (<em>float</em>) minimum magnitude to process event (-999 to disable).
+Enables not processing smaller magnitude events, e.g. for avoiding possible noisy waveforms or for speeding up testing.
+Recommended value is -999, disabled.</div>
+</div>
 </section>
 <section id="loc2ssst-program">
-<h2><span class="section-number">1.3.1.9. </span>Loc2ssst Program<a class="headerlink" href="#loc2ssst-program" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">1.3.1.9. </span>Loc2ssst Program<a class="headerlink" href="#loc2ssst-program" title="Permalink to this heading"></a></h2>
 <div class="line-block">
 <div class="line"><strong>LSOUT - Output File Root Name</strong></div>
 <div class="line"><em>required</em>, <em>non-repeatable</em></div>
@@ -1424,38 +1409,36 @@ flag to set activation of station distribution weighting (0=NO, 1=Yes)</div>
 <div class="line"><strong>LSLOCFILES - Input and Output File Root Name</strong></div>
 <div class="line"><em>required</em>, <em>non-repeatable</em></div>
 <div class="line">Syntax 1: <code class="docutils literal notranslate"><span class="pre">LSLOCFILES</span></code>
-<code class="docutils literal notranslate"><span class="pre">inputFileRoot</span></code> (<em>string</em>) full or relative path and file name (with .hyp extension and optional wild-cards) specifying input NLLoc <a href="#id51"><span class="problematic" id="id52">*</span></a>.hyp files</div>
+<code class="docutils literal notranslate"><span class="pre">inputFileRoot</span></code> (<em>string</em>) full or relative path and file name (with .hyp extension and optional wild-cards) specifying input NLLoc <a href="#id53"><span class="problematic" id="id54">*</span></a>.hyp files</div>
 </div>
 <div class="line-block">
 <div class="line"><strong>LOCFILES - Input and Output File Root Name</strong></div>
 <div class="line"><em>required</em>, <em>non-repeatable</em></div>
 <div class="line">Specifies the directory path and filename for the phase/observation
 files, and the file <em>root</em> names (no extension) for the input time
-grids. These parameters should be identical to NLLoc Program-&gt;LOCFILES used to generate NLLoc <a href="#id53"><span class="problematic" id="id54">*</span></a>.hyp files specified in LSLOCFILES.</div>
+grids. These parameters should be identical to NLLoc Program-&gt;LOCFILES used to generate NLLoc <a href="#id55"><span class="problematic" id="id56">*</span></a>.hyp files specified in LSLOCFILES.</div>
 <div class="line">See NLLoc Program-&gt;LOCFILES for syntax.</div>
 </div>
 <div class="line-block">
 <div class="line"><strong>LOCMETH - Location Method</strong></div>
 <div class="line"><em>required</em>, <em>non-repeatable</em></div>
 <div class="line">Specifies the location method (algorithm) and method parameters.
-These parameters should be identical to NLLoc Program-&gt;LOCMETH used to generate NLLoc <a href="#id55"><span class="problematic" id="id56">*</span></a>.hyp files specified in LSLOCFILES.</div>
+These parameters should be identical to NLLoc Program-&gt;LOCMETH used to generate NLLoc <a href="#id57"><span class="problematic" id="id58">*</span></a>.hyp files specified in LSLOCFILES.</div>
 <div class="line">See NLLoc Program-&gt;LOCMETH for syntax.</div>
 </div>
-<blockquote>
-<div><p><strong>LOCPHASEID - Phase Identifier Mapping</strong></p>
-</div></blockquote>
 <div class="line-block">
+<div class="line"><strong>LOCPHASEID - Phase Identifier Mapping</strong></div>
 <div class="line"><em>required</em>, <em>non-repeatable</em></div>
 <div class="line">Specifies the mapping of phase codes in the phase/observation file (
 <em>i.e.</em> <code class="docutils literal notranslate"><span class="pre">pg</span></code> or <code class="docutils literal notranslate"><span class="pre">Sn</span></code> ) to standardized phase codes ( <em>i.e.</em> <code class="docutils literal notranslate"><span class="pre">P</span></code>
-or <code class="docutils literal notranslate"><span class="pre">S</span></code> ). These parameters should be identical to NLLoc Program-&gt;LOCPHASEID used to generate NLLoc <a href="#id57"><span class="problematic" id="id58">*</span></a>.hyp files specified in LSLOCFILES.</div>
+or <code class="docutils literal notranslate"><span class="pre">S</span></code> ). These parameters should be identical to NLLoc Program-&gt;LOCPHASEID used to generate NLLoc <a href="#id59"><span class="problematic" id="id60">*</span></a>.hyp files specified in LSLOCFILES.</div>
 <div class="line">See NLLoc Program-&gt;LOCPHASEID for syntax.</div>
 </div>
 <div class="line-block">
 <div class="line"><strong>LSPARAMS - General parameters</strong></div>
 <div class="line"><em>required</em>, <em>non-repeatable</em></div>
 <div class="line">Syntax 1: <code class="docutils literal notranslate"><span class="pre">LSPARAMS</span></code> <code class="docutils literal notranslate"><span class="pre">CharDist</span> <span class="pre">WeightFloor</span> <span class="pre">UseRejected</span></code></div>
-<div class="line">   <code class="docutils literal notranslate"><span class="pre">CharDist</span></code> (<a href="#id59"><span class="problematic" id="id60">*</span></a>float*`) Characteristic event-station distance for weighting contribution of an event to SSST correction for a station calculation.</div>
+<div class="line">   <code class="docutils literal notranslate"><span class="pre">CharDist</span></code> (<a href="#id61"><span class="problematic" id="id62">*</span></a>float*`) Characteristic event-station distance for weighting contribution of an event to SSST correction for a station calculation.</div>
 <div class="line">   <code class="docutils literal notranslate"><span class="pre">WeightFloor</span></code> (<em>float</em>, min:<code class="docutils literal notranslate"><span class="pre">0.0</span></code>) Small value added to events-node weights so ssst values at large event-node distance remain non-zero (station static).</div>
 <div class="line">   <code class="docutils literal notranslate"><span class="pre">UseRejected</span></code> (<em>integer</em>, min:<code class="docutils literal notranslate"><span class="pre">0</span></code>, max:<code class="docutils literal notranslate"><span class="pre">1</span></code>, default:<code class="docutils literal notranslate"><span class="pre">0</span></code>) flag to indicate that NLL REJECTED locations should be accepted for SSST processing.</div>
 </div>

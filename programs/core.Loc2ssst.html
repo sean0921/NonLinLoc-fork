@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -94,11 +95,11 @@
 <div class="line"><br /></div>
 </div>
 <section id="loc2ssst-generate-ssst-corrections-on-a-to-3d-grid-for-nlloc-locations">
-<h1><span class="section-number">1.1.8. </span>Loc2ssst - generate SSST corrections on a  to 3D grid for NLLoc locations<a class="headerlink" href="#loc2ssst-generate-ssst-corrections-on-a-to-3d-grid-for-nlloc-locations" title="Permalink to this headline"></a></h1>
+<h1><span class="section-number">1.1.8. </span>Loc2ssst - generate SSST corrections on a  to 3D grid for NLLoc locations<a class="headerlink" href="#loc2ssst-generate-ssst-corrections-on-a-to-3d-grid-for-nlloc-locations" title="Permalink to this heading"></a></h1>
 <p>Given a set of NLLoc locations, <strong>Loc2ssst</strong> generates station and phase specific, SSST corrections over a specified 3D grid
 and adds these corrections to the input travel-times used for NLLoc location to generate new, SSST travel-time grids.</p>
 <section id="overview">
-<h2><span class="section-number">1.1.8.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">1.1.8.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>For each station and phase in the input NLLoc locations (see LSLOCFILES),
 the Loc2ssst program accumulates over a specified SSST 3D grid (see LSGRID)
 a weighted sum of the residuals for the station and phase for each input NLLoc location.  Each residual is weighted based on the
@@ -109,7 +110,7 @@ distance <cite>D</cite> between the grid cell and the coresponding hypocenter us
 <p>where <cite>CharDist</cite> and <cite>WeightFloor</cite> are specified in LSPARAMS.</p>
 </section>
 <section id="running-the-program-input">
-<h2><span class="section-number">1.1.8.2. </span>Running the program - Input<a class="headerlink" href="#running-the-program-input" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">1.1.8.2. </span>Running the program - Input<a class="headerlink" href="#running-the-program-input" title="Permalink to this heading"></a></h2>
 <p>Synopsis: <code class="docutils literal notranslate"><span class="pre">Loc2ssst</span> <span class="pre">InputControlFile</span></code></p>
 <p>The Loc2ssst program takes a single argument <code class="docutils literal notranslate"><span class="pre">InputControlFile</span></code> which
 specifies the complete path and filename for an <cite>Input Control
@@ -122,7 +123,7 @@ the <cite>Generic Statements section</cite> of the Input Control File must conta
 Statements in the Input Control File</p>
 </section>
 <section id="output">
-<h2><span class="section-number">1.1.8.3. </span>Output<a class="headerlink" href="#output" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">1.1.8.3. </span>Output<a class="headerlink" href="#output" title="Permalink to this heading"></a></h2>
 <p>The calculated SSST values throughout the requested <code class="docutils literal notranslate"><span class="pre">LSGRID</span></code> grid are
 written to a new <cite>3D Grid</cite>.
 The updated travel-time values throughout the requested <code class="docutils literal notranslate"><span class="pre">LSOUTGRID</span></code> grid are
@@ -131,7 +132,7 @@ For a descrition of the naming convention for these grid files, see the
 <code class="docutils literal notranslate"><span class="pre">LSOUT</span></code> statement in the Loc2ssst Statements section of the Input Control File.</p>
 </section>
 <section id="processing-and-display-of-results">
-<h2><span class="section-number">1.1.8.4. </span>Processing and Display of results<a class="headerlink" href="#processing-and-display-of-results" title="Permalink to this headline"></a></h2>
+<h2><span class="section-number">1.1.8.4. </span>Processing and Display of results<a class="headerlink" href="#processing-and-display-of-results" title="Permalink to this heading"></a></h2>
 <p>The 3D SSST and updated travel-time grids can be post-processed with the program
 <cite>Grid2GMT</cite> to
 produce a GMT command script for plotting with the <a class="reference external" href="http://gmt.soest.hawaii.edu/">GMT plotting
