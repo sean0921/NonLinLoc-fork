@@ -193,7 +193,7 @@ samples and by program Time2EQ to generate noisy time picks)</div>
 <div class="line">Syntax 3: <code class="docutils literal notranslate"><span class="pre">TRANS</span></code> <code class="docutils literal notranslate"><span class="pre">NONE</span></code></div>
 <div class="line">Syntax 4: <code class="docutils literal notranslate"><span class="pre">TRANS</span></code> <code class="docutils literal notranslate"><span class="pre">SDC</span> <span class="pre">latOrig</span> <span class="pre">longOrig</span> <span class="pre">rotAngle</span></code></div>
 <div class="line">Syntax 5: <code class="docutils literal notranslate"><span class="pre">TRANS</span></code> <code class="docutils literal notranslate"><span class="pre">LAMBERT</span> <span class="pre">refEllipsoid</span> <span class="pre">latOrig</span> <span class="pre">longOrig</span> <span class="pre">firstStdParal</span> <span class="pre">secondStdParal</span> <span class="pre">rotAngle</span></code></div>
-<div class="line">Syntax 6: <code class="docutils literal notranslate"><span class="pre">TRANS</span></code> <code class="docutils literal notranslate"><span class="pre">TRANS_MERC</span> <span class="pre">refEllipsoid</span> <span class="pre">latOrig</span> <span class="pre">longOrig</span> <span class="pre">rotAngle</span></code></div>
+<div class="line">Syntax 6: <code class="docutils literal notranslate"><span class="pre">TRANS</span></code> <code class="docutils literal notranslate"><span class="pre">TRANS_MERC</span> <span class="pre">refEllipsoid</span> <span class="pre">latOrig</span> <span class="pre">longOrig</span> <span class="pre">rotAngle</span> <span class="pre">[useFalseEasting]</span> <span class="pre">[falseEasting]</span> <span class="pre">[mapScaleFactor]</span></code></div>
 <div class="line">Syntax 7: <code class="docutils literal notranslate"><span class="pre">TRANS</span></code> <code class="docutils literal notranslate"><span class="pre">AZIMUTHAL_EQUIDIST</span> <span class="pre">refEllipsoid</span> <span class="pre">latOrig</span> <span class="pre">longOrig</span> <span class="pre">rotAngle</span></code></div>
 <div class="line">Sets geographic to working coordinates transformation parameters. The
 <cite>GLOBAL`</cite> option sets spherical regional/teleseismic mode, with no
@@ -222,6 +222,13 @@ decimal degrees</div>
 <div class="line">   <code class="docutils literal notranslate"><span class="pre">rotAngle</span></code> (<em>float</em>, min:<code class="docutils literal notranslate"><span class="pre">-360.0</span></code>, max:<code class="docutils literal notranslate"><span class="pre">360.0</span></code>) rotation
 angle of geographic north in degrees clockwise relative to the
 rectangular coordinates system Y-axis</div>
+<div class="line">   <code class="docutils literal notranslate"><span class="pre">useFalseEasting</span></code> (<em>choice</em>: <cite>0 1`</cite>) whether to use
+false easting in UTM coordinates or not</div>
+<div class="line">   <code class="docutils literal notranslate"><span class="pre">falseEasting</span></code> (<em>int</em>) false easting in meters to use in UTM coordinates,
+defaults to <code class="docutils literal notranslate"><span class="pre">500000</span></code> (500km) if not specified and <code class="docutils literal notranslate"><span class="pre">useFalseEasting</span></code> is
+switched on</div>
+<div class="line">   <code class="docutils literal notranslate"><span class="pre">mapScaleFactor</span></code> (<em>float</em>) map scale factor to use in UTM coordinate
+conversion, defaults to <code class="docutils literal notranslate"><span class="pre">1.0</span></code> if not specified</div>
 <div class="line">Notes:</div>
 <div class="line">   1. <code class="docutils literal notranslate"><span class="pre">rotAngle</span></code> = <code class="docutils literal notranslate"><span class="pre">0</span></code> gives
  North along the positive Y-axis,
